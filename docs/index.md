@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 随便看看
-      link: /JavaScript/变量
+      link: /JavaScript/
     - theme: alt
       text: View on GitHub
       link: https://github.com/vuejs/vitepress

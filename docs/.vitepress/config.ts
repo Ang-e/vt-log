@@ -80,7 +80,7 @@ function sidebarJs() {
       text: '语言基础',
       collapsed: false,
       items: [
-        { text: '变量', link: '/JavaScript/变量' },
+        { text: '变量', link: '/JavaScript/' },
         { text: '数据类型', link: '/JavaScript/数据类型' },
       ]
     },
@@ -89,7 +89,7 @@ function sidebarJs() {
 
 function sidebarTs() {
   return [
-    { text: '开始', link: '/TypeScript/开始' },
+    { text: '开始', link: '/TypeScript/' },
     { text: '基本类型', link: '/TypeScript/基本类型' },
     { text: '接口', link: '/TypeScript/接口' },
     { text: '类', link: '/TypeScript/类' },
