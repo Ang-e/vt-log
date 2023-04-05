@@ -32,22 +32,33 @@ export default defineConfig({
   // 缓存文件输出位置，默认值：'./.vitepress/cache'
   // cacheDir: './.vitepress/.vite',
   // 是否使用 Git 获取每个页面的最后更新时间戳
-  lastUpdated: true,
+  lastUpdated: false,
   themeConfig: {
     logo: '/logo.png',
     // You can customize this item to replace the default site title (title in app config) in nav.
     siteTitle: 'i许西的笔记',
+    // 自定义右侧栏的标题
+    outlineTitle: '大纲',
+    docFooter: {
+      prev: '上一页',
+      next: '下一页',
+    },
     nav: nav(),
     sidebar: {
       '/JavaScript/': sidebarJs(),
+      '/TypeScript/': sidebarTs(),
     },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ],
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright (c) 2023 i许西'
+      copyright: 'Copyright (c) 2023 Ang-e'
     }
+  },
+  rewrites: {
+    'JavaScript/变量.md': 'JavaScript/index.md',
+    'TypeScript/开始.md': 'TypeScript/index.md',
   },
 })
 
@@ -56,7 +67,8 @@ function nav() {
     {
       text: 'Web',
       items: [
-        { text: 'JavaScript', link: '/JavaScript/变量', activeMatch: '/JavaScript/'}
+        { text: 'JavaScript', link: '/JavaScript/', activeMatch: '/JavaScript/'},
+        { text: 'TypeScript', link: '/TypeScript/', activeMatch: '/TypeScript/'}
       ]
     },
   ];
@@ -72,5 +84,21 @@ function sidebarJs() {
         { text: '数据类型', link: '/JavaScript/数据类型' },
       ]
     },
+  ];
+}
+
+function sidebarTs() {
+  return [
+    { text: '开始', link: '/TypeScript/开始' },
+    { text: '基本类型', link: '/TypeScript/基本类型' },
+    { text: '接口', link: '/TypeScript/接口' },
+    { text: '类', link: '/TypeScript/类' },
+    { text: '函数', link: '/TypeScript/函数' },
+    { text: '泛型', link: '/TypeScript/泛型' },
+    { text: '枚举', link: '/TypeScript/枚举' },
+    { text: '高级类型', link: '/TypeScript/高级类型' },
+    { text: '错误处理', link: '/TypeScript/错误处理' },
+    { text: '常见用法', link: '/TypeScript/常见用法' },
+    { text: 'React+', link: '/TypeScript/React+' },
   ];
 }
