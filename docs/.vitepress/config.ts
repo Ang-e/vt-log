@@ -6,7 +6,7 @@ export default defineConfig({
   title: "i许西的笔记",
   description: "i许西的笔记",
   // 部署地址子路径，默认值：'/'
-  base: '/vt-log/',
+  base: '/',
   // 清理 html 后缀，默认值：false
   cleanUrls: true,
   // 标题格式模板，例如：':title - Custom Suffix'
