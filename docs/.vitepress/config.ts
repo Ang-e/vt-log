@@ -5,8 +5,9 @@ export default defineConfig({
   lang: 'zh-CN',
   title: "i许西的笔记",
   description: "i许西的笔记",
-  // 部署地址子路径，默认值：'/'
-  base: '/',
+  // 部署地址子路径，默认值：'/'，如果你的文档部署在一个子路径下，请设置该选项
+  // 例如，你的文档部署在 https://example.com/docs/，则设置 base: '/docs/'
+  base: '/vt-log/',
   // 清理 html 后缀，默认值：false
   cleanUrls: true,
   // 标题格式模板，例如：':title - Custom Suffix'
